@@ -1,5 +1,9 @@
 public class Main {
     public static void main(String[] args) {
-        minAndMax. minAndMax();
+
+        Sorting.sorting();
+        LowerThenAverage.lowerThanAverage();
+        DiffChar.diffChar();
+        Palindrome.palindrome();
     }
 }
