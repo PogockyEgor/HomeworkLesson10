@@ -17,25 +17,20 @@ public class Palindrome {
 
     static void diff(String[] words) {
         char[] symbols = new char[100];
+        char[] numbers = {1, 2, 3, 4, 5, 6, 7, 8, 9};
         boolean isPalindrome = true;
         for (String word :
                 words) {
-            boolean isNumbers = true;
-            for (int i = 0; i < word.length(); i++) {
-                if (words[i].equals("[^0-9]")){
-                }
-                isPalindrome = true;
-                if (isNumbers) {
-                    for (int j = 0; j < words.length / 2; j++) {
-                        if (!(symbols[j] == symbols[word.length() - j])) {
-                            isPalindrome = false;
-                        }
+            if (word.matches("\\b[0-9]+[0-9]") == isPalindrome) {
+
+                for (int i = 0; i < word.length() / 2; i++) {
+                    if (word.charAt(i) != word.charAt(word.length() - i - 1)) {
+                        isPalindrome = false;
                     }
                 }
-
-            }
-            if (isPalindrome) {
-                System.out.println(word);
+                if (isPalindrome) {
+                    System.out.println(word);
+                }
             }
         }
     }
