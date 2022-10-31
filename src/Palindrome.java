@@ -21,8 +21,7 @@ public class Palindrome {
         boolean isPalindrome = true;
         for (String word :
                 words) {
-            if (word.matches("\\b[0-9]+[0-9]") == isPalindrome) {
-
+            if (word.matches("\\b[0-9]+[0-9]")) {
                 for (int i = 0; i < word.length() / 2; i++) {
                     if (word.charAt(i) != word.charAt(word.length() - i - 1)) {
                         isPalindrome = false;
